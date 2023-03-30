@@ -1,7 +1,8 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 
-require 'pry'
-require_relative '../config/environment'
+require "pry"
+require_relative "../config/environment"
+DB = { conn: SQLite3::Database.new("db/music.db") }
 
 def reset_database
   Song.drop_table
